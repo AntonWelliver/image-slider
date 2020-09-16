@@ -1,4 +1,4 @@
-const slides = document.querySelectorAll('.slide');
+const slideList = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
 const auto = true; // Auto scroll
@@ -16,7 +16,7 @@ const nextSlide = () => {
         current.nextElementSibling.classList.add('current');
     } else {
         // Add current to start
-        slides[0].classList.add('current');
+        slideList[0].classList.add('current');
     }
     setTimeout(() => current.classList.remove('current'));
 };
@@ -32,7 +32,7 @@ const prevSlide = () => {
         current.previousElementSibling.classList.add('current');
     } else {
         // Add current to last
-        slides[slides.length - 1].classList.add('current');
+        slideList[slideList.length - 1].classList.add('current');
     }
     setTimeout(() => current.classList.remove('current'));
 };
