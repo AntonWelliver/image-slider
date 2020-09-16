@@ -11,7 +11,7 @@ const nextSlide = () => {
     // Remove current class
     current.classList.remove('current');
     // Check for next slide
-    if (current.nextElementSibling) {
+    if (current.nextElementSibling && current.nextElementSibling.classList.contains("slide")) {
         // Add current to next sibling
         current.nextElementSibling.classList.add('current');
     } else {
